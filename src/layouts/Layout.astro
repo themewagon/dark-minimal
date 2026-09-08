@@ -4,6 +4,8 @@ interface Props {
 }
 
 const { title } = Astro.props;
+const siteUrl = "https://themewagon.github.io/dark-minimal/";
+const baseUrl = import.meta.env.BASE_URL;
 ---
 
 <!doctype html>
@@ -16,12 +18,12 @@ const { title } = Astro.props;
       content="Your Name - Software Developer building interactive and seamless digital experiences with cutting-edge frontend development."
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" href="/favicon.png" />
-    <link rel="canonical" href="https://darkminimal.vercel.app/" />
+    <link rel="icon" type="image/png" href={`${baseUrl}/favicon.png`} />
+    <link rel="canonical" href={siteUrl} />
 
     <link
       rel="preload"
-      href="/fonts/montserrat-latin-wght-normal.woff2"
+      href={`${baseUrl}/fonts/montserrat-latin-wght-normal.woff2`}
       as="font"
       type="font/woff2"
       crossorigin="anonymous"
@@ -37,9 +39,9 @@ const { title } = Astro.props;
     />
     <meta
       property="og:image"
-      content="https://darkminimal.vercel.app/og.image.png"
+      content={`${siteUrl}og.image.png`}
     />
-    <meta property="og:url" content="https://darkminimal.vercel.app" />
+    <meta property="og:url" content={siteUrl} />
     <meta property="og:type" content="website" />
     <meta
       property="og:site_name"
@@ -53,8 +55,8 @@ const { title } = Astro.props;
         "@type": "Person",
         "name": "Your Name",
         "alternateName": "Your Name",
-        "url": "https://darkminimal.vercel.app",
-        "image": "https://darkminimal.vercel.app/og.image.png",
+        "url": "https://themewagon.github.io/dark-minimal/",
+        "image": "https://themewagon.github.io/dark-minimal/og.image.png",
         "sameAs": [
           "https://github.com",
           "https://linkedin.com"
